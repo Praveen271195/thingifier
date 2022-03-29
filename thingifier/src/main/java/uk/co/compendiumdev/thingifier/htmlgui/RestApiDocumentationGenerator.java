@@ -337,6 +337,7 @@ public class RestApiDocumentationGenerator {
         return output.toString();
     }
 
+    //TODO: Concatenates Strings using + in a loop
     private String getExampleFilter(final EntityDefinition filterableEntity) {
         String exampleFilters = "";
         List<Field> exampleFields = new ArrayList<>();
