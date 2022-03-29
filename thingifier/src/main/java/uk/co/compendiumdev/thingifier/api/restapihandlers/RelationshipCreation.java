@@ -24,6 +24,7 @@ public class RelationshipCreation {
         this.thingifier = aThingifier;
     }
 
+    // TODO: Not accessible part of code could be deleted 
     public ApiResponse create(final String url, final BodyParser bodyargs, final SimpleQuery query) {
 
         final Map<String, String> args = bodyargs.getStringMap();
