@@ -15,6 +15,7 @@ public class DefinedFields {
     // to control field order
     private List<String> orderedFieldNames = new ArrayList<>();
 
+    //TODO: Avoid concatenating nonliterals in a StringBuffer or append()
     @Override
     public String toString() {
         StringBuilder output = new StringBuilder();
