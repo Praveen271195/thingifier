@@ -91,6 +91,7 @@ final public class EntityInstanceCollection {
      * @param guid
      * @return
      */
+    // TODO: Consider simply returning the valeu vs storing it in local variable "alsoDelete"
     public List<EntityInstance> deleteInstance(String guid) {
 
         if (!instances.containsKey(guid)) {
