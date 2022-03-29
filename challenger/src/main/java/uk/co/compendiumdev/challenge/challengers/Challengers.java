@@ -15,6 +15,7 @@ public class Challengers {
     private boolean singlePlayerMode;
     Map<String, ChallengerAuthData> authData;
     public ChallengerAuthData SINGLE_PLAYER;
+    // TODO: This final method could be made static
     public final String SINGLE_PLAYER_GUID="rest-api-challenges-single-player";
     public final ChallengerAuthData DEFAULT_PLAYER_DATA = new ChallengerAuthData();
     PersistenceLayer persistenceLayer;

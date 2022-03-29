@@ -266,8 +266,9 @@ public class ChallengerWebGUI {
         final Collection<ChallengeSection> sections = challengeDefinitions.getChallengeSections();
 
         for(ChallengeSection section : sections){
-
+            // TODO: Avoid concateating nonliterals in a StringBuffer
             html.append("<h2>" + section.getTitle() + "</h2>");
+            // TODO: Avoid concateating nonliterals in a StringBuffer
             html.append("<p class='challengesectiondescription'>" + section.getDescription() + "</p>");
 
             List<ChallengeDefinitionData> sectionData = new ArrayList<>();

@@ -20,8 +20,9 @@ public class ApiRoutingDefinitionGenerator {
 
     private final Thingifier thingifier;
     private final ThingifierApiConfig config;
-
+    // TODO: the final field could be made static
     private final String uniqueGUID = ":guid";
+    // TODO: the final field could be made static
     private final String uniqueID = ":id";
     private final Map<FieldType, String> uniqueReferenceText;
 

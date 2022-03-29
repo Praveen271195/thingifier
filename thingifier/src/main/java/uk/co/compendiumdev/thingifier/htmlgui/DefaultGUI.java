@@ -182,6 +182,7 @@ public class DefaultGUI {
 
                         for (RelationshipVectorDefinition relationship : definition.related().getRelationships()) {
                             final Collection<EntityInstance> relatedItems = instance.getRelationships().getConnectedItems(relationship.getName());
+                            // TODO: Avoid concateating nonliterals in a StringBuffer
                             html.append("<h3>" + relationship.getName() + "</h3>");
                             if (relatedItems.size() > 0) {
                                 boolean header = true;
