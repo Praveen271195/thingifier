@@ -68,6 +68,7 @@ public class RelationshipDefinition {
     /*
         A Relationship is known as any of its vector names
      */
+    //TODO: Using equalIgnoreCase() is cleaner than using toUpperCase/toLowerCase().equals()
     public boolean isKnownAs(String relationshipName) {
 
         if (fromTo.getName().toLowerCase().equalsIgnoreCase(relationshipName)) {
