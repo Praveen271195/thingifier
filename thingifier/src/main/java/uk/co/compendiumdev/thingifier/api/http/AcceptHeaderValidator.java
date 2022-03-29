@@ -16,6 +16,7 @@ public class AcceptHeaderValidator {
 
         int statusAcceptTypeNotSupported = this.apiConfig.statusCodes().acceptTypeNotSupported();
 
+        // TODO: If statements could be combined as one
         if(this.apiConfig.willApiEnforceAcceptHeaderForResponses()){
             if (!accept.isSupportedHeader()){
                 apiResponse = ApiResponse.error(statusAcceptTypeNotSupported, "Unrecognised Accept Type");
