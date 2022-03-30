@@ -125,10 +125,5 @@ public class DefaultGUIHTML {
     private String li(final String initialParagraph) {
         return String.format("<li>%s</li>%n", initialParagraph);
     }
-
-    // TODO: Unused method can be removed
-    // Template functions
-    private String heading(final int level, final String text) {
-        return String.format("<h%1$d>%2$s</h%1$d>%n", level, text);
-    }
+    
 }
