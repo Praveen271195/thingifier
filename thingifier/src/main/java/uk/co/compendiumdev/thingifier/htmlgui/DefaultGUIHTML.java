@@ -125,5 +125,5 @@ public class DefaultGUIHTML {
     private String li(final String initialParagraph) {
         return String.format("<li>%s</li>%n", initialParagraph);
     }
-    
+
 }
