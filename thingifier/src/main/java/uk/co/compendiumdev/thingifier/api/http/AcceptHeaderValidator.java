@@ -15,12 +15,9 @@ public class AcceptHeaderValidator {
         ApiResponse apiResponse=null;
 
         int statusAcceptTypeNotSupported = this.apiConfig.statusCodes().acceptTypeNotSupported();
-
-        // TODO: If statements could be combined as one
-        if(this.apiConfig.willApiEnforceAcceptHeaderForResponses()){
-            if (!accept.isSupportedHeader()){
-                apiResponse = ApiResponse.error(statusAcceptTypeNotSupported, "Unrecognised Accept Type");
-            }
+        
+        if(this.apiConfig.willApiEnforceAcceptHeaderForResponses() & !accept.isSupportedHeader()){
+            apiResponse = ApiResponse.error(statusAcceptTypeNotSupported, "Unrecognised Accept Type");
         }
 
         boolean willOnlyAcceptXML = accept.hasAskedFor(AcceptHeaderParser.ACCEPT_TYPE.XML) &&
