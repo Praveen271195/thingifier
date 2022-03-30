@@ -27,11 +27,10 @@ public class EntityDefinition {
         // e.g. model.internalUniqueIDFieldName("bob")
         addField(Field.is("guid", FieldType.GUID));
     }
-    // TODO: Avoid concatenating nonliterals
     public String toString() {
         StringBuilder output = new StringBuilder();
 
-        output.append("\t" + name + "\n");
+
         output.append(fields.toString());
 
         return output.toString();
