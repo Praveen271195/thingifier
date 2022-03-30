@@ -177,7 +177,7 @@ public class BodyParser {
 
     }
 
-
+    // TODO: IF statement can be optimized
     public ValidationReport validateAgainstType(final EntityDefinition entity) {
         ValidationReport report = new ValidationReport();
         for(Map.Entry<String, Object>arg : args.entrySet()){
@@ -211,11 +211,9 @@ public class BodyParser {
             // TODO: add " but was %s" e.g. should be BOOLEAN but was STRING - remember to change in challenges checking
             String errorMessage = String.format("%s should be %s but was %s", field.getName(), field.getType(), isInstanceType);
 
-            if(field.getType()== FieldType.BOOLEAN){
-                if (!(theValue instanceof Boolean )) {
-                    report.setValid(false);
-                    report.addErrorMessage(errorMessage);
-                }
+            if(field.getType()== FieldType.BOOLEAN & !(theValue instanceof Boolean)){
+                report.setValid(false);
+                report.addErrorMessage(errorMessage);
             }
             if(field.getType()== FieldType.INTEGER || field.getType()==FieldType.ID){
                 if (!(theValue instanceof Double )) {
