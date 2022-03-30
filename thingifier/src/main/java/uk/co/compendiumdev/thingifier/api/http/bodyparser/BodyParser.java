@@ -34,7 +34,7 @@ public class BodyParser {
         return stringMap(getMap());
     }
 
-    // TODO: StringMap(Map) makes inefficient use of keySet interator instead of entrySet iterator
+    // TODO: StringMap(Map) makes inefficient use of keySet interator instead of entrySet  iterator
     private Map<String, String> stringMap(final Map<String, Object> args) {
         // todo: configuration to reject if wrong types for field definitions
         // default should be to handle and convert
