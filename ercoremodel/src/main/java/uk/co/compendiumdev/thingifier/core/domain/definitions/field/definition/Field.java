@@ -337,9 +337,8 @@ public final class Field {
             buildExamples.add(UUID.randomUUID().toString());
         }
 
-        // TODO: Method used floating point precision
         if(type==FieldType.FLOAT){
-            final float rndFloat = minimumFloatValue + ThreadLocalRandom.current().nextFloat() * (maximumFloatValue - minimumFloatValue);
+            final double rndFloat = minimumFloatValue + ThreadLocalRandom.current().nextFloat() * (maximumFloatValue - minimumFloatValue);
             buildExamples.add(String.valueOf(rndFloat));
         }
 
