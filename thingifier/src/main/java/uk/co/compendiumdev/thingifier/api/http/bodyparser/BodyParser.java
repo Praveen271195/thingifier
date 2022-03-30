@@ -223,14 +223,10 @@ public class BodyParser {
                     arg.setValue(((Double) theValue).intValue());
                 }
             }
-            // TODO: IF statement can be optimized
-            if(field.getType()== FieldType.FLOAT){
-                if (!(theValue instanceof Double )) {
-                    report.setValid(false);
-                    report.addErrorMessage(errorMessage);
-                }
+            if(field.getType()== FieldType.FLOAT & !(theValue instanceof Double)){
+                report.setValid(false);
+                report.addErrorMessage(errorMessage);
             }
-            // everything else goes
         }
         return report;
     }
