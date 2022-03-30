@@ -124,8 +124,7 @@ public class BodyRelationshipValidator {
             reportIsNotValidRelationship(complexKey, report);
             return false;
         }
-        // TODO: Dead store, can be deleted
-        String relationshipsPart = parts[0];
+        
         String relationshipNamePart = parts[1];
         String relationshipToPart = parts[2];
         String relationshipFieldPart = parts[3];
